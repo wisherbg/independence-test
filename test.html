@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Въпросник за самостоятелност: Време е за избор</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1, h2, h3 {
+            color: #555;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-top: 20px;
+        }
+        .question-group {
+            margin-bottom: 25px;
+        }
+        .question {
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #000;
+        }
+        .answer {
+            margin-bottom: 8px;
+        }
+        .answer label {
+            display: block;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .answer label:hover {
+            background-color: #f0f0f0;
+        }
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 30px;
+        }
+        .submit-btn:hover {
+            background-color: #0056b3;
+        }
+        .result-box {
+            margin-top: 30px;
+            padding: 20px;
+            border-radius: 8px;
+            border: 2px solid #ccc;
+            display: none;
+            background-color: #fafafa;
+        }
+        .result-box h3 {
+            border: none;
+            margin-top: 0;
+        }
+        .recommendation {
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-top: 15px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Въпросник за самостоятелност: Време е за избор</h1>
+    <p>Пред теб стои важен избор: да продължиш веднага с висшето си образование или да си вземеш една година почивка, в която да работиш и да се издържаш сам. Този въпросник е създаден, за да ти помогне да помислиш за следващата си стъпка. Няма правилни или грешни отговори. Честното размишление ще ти даде най-добра представа за това, къде си и върху какво може да работиш през следващата година.</p>
+
+    <form id="quizForm">
+        <div class="question-group">
+            <h2>1. Финансова Отговорност</h2>
+            <div class="question">1. Представи си, че започваш работа и получаваш първата си заплата. Какво правиш с парите?</div>
+            <div class="answer"><label><input type="radio" name="q1" value="A"> Купуваш си всички неща, които искаш отдавна. Парите са за харчене, нали?</label></div>
+            <div class="answer"><label><input type="radio" name="q1" value="B"> Слагаш ги в отделна сметка. Смяташ, че е добре да имаш спестявания за спешни случаи, дори и да не знаеш за какво ще са.</label></div>
+            <div class="answer"><label><input type="radio" name="q1" value="C"> Разделяш парите – част за нещо конкретно, което ти трябва, част за забавления и част за спестявания.</label></div>
+            <div class="answer"><label><input type="radio" name="q1" value="D"> Записваш парите в тетрадка, за да следиш разходите си и решаваш какво ще правиш с тях по-късно.</label></div>
+        </div>
+
+        <div class="question-group">
+            <div class="question">2. При размисъл върху възможността да се издържаш сам, колко пари смяташ, че са ти нужни месечно, за да живееш?</div>
+            <div class="answer"><label><input type="radio" name="q2" value="A"> Не съм мислил за това, но предполагам, че колкото имам, толкова ще ми стигнат.</label></div>
+            <div class="answer"><label><input type="radio" name="q2" value="B"> Имам приблизителна представа, но не съм правил конкретни изчисления за наем, сметки, храна и други.</label></div>
+            <div class="answer"><label><input type="radio" name="q2" value="C"> Знам какви са основните разходи за живот и съм изчислил, че ще са ми нужни около 1200 лв.</label></div>
+            <div class="answer"><label><input type="radio" name="q2" value="D"> Имам бюджет и знам точно колко ще ми струват основните сметки, но все още не съм сигурен колко ще ми трябват за храна и други нужди.</label></div>
+        </div>
+
+        <div class="question-group">
+            <div class="question">3. Имаш нужда от нов лаптоп за следващата година. Как планираш да го купиш?</div>
+            <div class="answer"><label><input type="radio" name="q3" value="A"> Ще помоля родителите си да ми го купят. Те винаги са ми помагали с важни покупки.</label></div>
+            <div class="answer"><label><input type="radio" name="q3" value="B"> Започвам да работя на временна работа, за да събера пари. Така ще си го купя сам и ще оценя труда си.</label></div>
+            <div class="answer"><label><input type="radio" name="q3" value="C"> Ще проуча какви са най-добрите възможности за разсрочено плащане или ще кандидатствам за заем.</label></div>
+            <div class="answer"><label><input type="radio" name="q3" value="D"> Ще проуча пазара, за да намеря най-добрата оферта, и ще обмисля дали да взема втора ръка, за да спестя пари.</label></div>
+        </div>
+        
+        <div class="question-group">
+            <div class="question">4. Имаш нужда да платиш онлайн сметка за наем или комунални услуги. Как го правиш?</div>
+            <div class="answer"><label><input type="radio" name="q4" value="A"> Даваш картата си на родителите си и ги молиш те да направят плащането.</label></div>
+            <div class="answer"><label><input type="radio" name="q4" value="B"> Опитваш се да влезеш в системата, но тъй като е сложно, се отказваш.</label></div>
+            <div class="answer"><label><input type="radio" name="q4" value="C"> Правиш плащането сам, като следваш стъпките, посочени на сайта.</label></div>
+            <div class="answer"><label><input type="radio" name="q4" value="D"> Свързваш се с клиентския център, за да помолиш някой да те преведе през процеса.</label></div>
+        </div>
+
+        <div class="question-group">
+            <h2>2. Управление на Домакинството</h2>
+            <div class="question">1. Представи си, че живееш под наем и бойлерът се разваля. Какво правиш?</div>
+            <div class="answer"><label><input type="radio" name="q5" value="A"> Веднага се обаждаш на хазяина и чакаш той да реши проблема.</label></div>
+            <div class="answer"><label><input type="radio" name="q5" value="B"> Опитваш се да видиш дали можеш да го оправиш сам, като гледаш видеа в YouTube, преди да се обадиш на някого.</label></div>
+            <div class="answer"><label><input type="radio" name="q5" value="C"> Свързваш се с хазяина, за да го уведомиш, но същевременно търсиш и други майстори, за да имаш опции.</label></div>
+            <div class="answer"><label><input type="radio" name="q5" value="D"> Опитваш се да живееш без топла вода за няколко дни, докато не събереш сили да се обадиш на хазяина.</label></div>
+        </div>
+        
+        <div class="question-group">
+            <div class="question">2. Живееш сам и в апартамента ти се налага основно почистване. Какво е твоето отношение?</div>
+            <div class="answer"><label><input type="radio" name="q6" value="A"> Ще почистя, но само ако имам време и желание. Все пак съм сам.</label></div>
+            <div class="answer"><label><input type="radio" name="q6" value="B"> Ще почистя само моята стая и ще оставя другото да изчака.</label></div>
+            <div class="answer"><label><input type="radio" name="q6" value="C"> Поемам инициативата, като подготвям план за почистване и си разпределям задачите във времето.</label></div>
+            <div class="answer"><label><input type="radio" name="q6" value="D"> Поемам инициативата да почистя общите части, дори и да не ме е помолил никой.</label></div>
+        </div>
+
+        <div class="question-group">
+            <div class="question">3. Вкъщи храната е на привършване. Какво правиш?</div>
+            <div class="answer"><label><input type="radio" name="q7" value="A"> Чакаш родителите си да направят списък за пазаруване, който след това просто следваш.</label></div>
+            <div class="answer"><label><input type="radio" name="q7" value="B"> Отиваш в магазина и купуваш нещата, които ти се ядат в момента.</label></div>
+            <div class="answer"><label><input type="radio" name="q7" value="C"> Преглеждаш хладилника и шкафовете, за да видиш какво липсва, и правиш списък на основните продукти.</label></div>
+            <div class="answer"><label><input type="radio" name="q7" value="D"> Поръчваш си храна, защото ти е по-лесно, отколкото да ходиш на пазар.</label></div>
+        </div>
+
+        <div class="question-group">
+            <div class="question">4. Трябва да изпереш дрехи, но етикетът им е развален. Какво правиш?</div>
+            <div class="answer"><label><input type="radio" name="q8" value="A"> Слагаш ги в пералнята заедно с всички останали дрехи.</label></div>
+            <div class="answer"><label><input type="radio" name="q8" value="B"> Проверяваш в интернет как се пере такъв плат, за да не съсипеш дрехите си.</label></div>
+            <div class="answer"><label><input type="radio" name="q8" value="C"> Питаш родителите си дали знаят как се пере този тип дреха.</label></div>
+            <div class="answer"><label><input type="radio" name="q8" value="D"> Решаваш да не ги переш и ги оставяш настрана, докато не разбереш.</label></div>
+        </div>
+
+        <div class="question-group">
+            <h2>3. Здраве и Лични Грижи</h2>
+            <div class="question">1. Събуждаш се с много силно главоболие и не можеш да станеш от леглото. Какво правиш?</div>
+            <div class="answer"><label><input type="radio" name="q9" value="A"> Не правиш нищо и чакаш да се почувстваш по-добре.</label></div>
+            <div class="answer"><label><input type="radio" name="q9" value="B"> Свързваш се с някой родител или приятел и ги питаш какво да правиш.</label></div>
+            <div class="answer"><label><input type="radio" name="q9" value="C"> Взимаш някакво лекарство за болка и си почиваш, като наблюдаваш дали състоянието ти се подобрява. Ако не, търсиш помощ.</label></div>
+            <div class="answer"><label><input type="radio" name="q9" value="D"> Проверяваш симптомите в интернет, за да разбереш какво може да ти е.</label></div>
+        </div>
+
+        <div class="question-group">
+            <div class="question">2. Предстои ти важно събитие, но се чувстваш твърде изморен и стресиран. Какво е твоето решение?</div>
+            <div class="answer"><label><input type="radio" name="q10" value="A"> Решаваш да отидеш, но прекарваш по-голямата част от времето сам.</label></div>
+            <div class="answer"><label><input type="radio" name="q10" value="B"> Отменяш участието си, като обясняваш, че се чувстваш изморен и стресиран.</label></div>
+            <div class="answer"><label><input type="radio" name="q10" value="C"> Взимаш си кратка почивка, за да си отпочинеш, и след това отиваш на събитието, готов за общуване.</label></div>
+            <div class="answer"><label><input type="radio" name="q10" value="D"> Опитваш се да скриеш как се чувстваш и да се държиш нормално, за да не развалиш събитието.</label></div>
+        </div>
+
+        <div class="question-group">
+            <div class="question">3. Забелязваш, че си се чувствал много тъжен през последните две седмици, без конкретна причина. Какво правиш?</div>
+            <div class="answer"><label><input type="radio" name="q11" value="A"> Не правиш нищо, защото вярваш, че това ще премине само.</label></div>
+            <div class="answer"><label><input type="radio" name="q11" value="B"> Обсъждаш чувствата си с близък приятел, на когото имаш доверие.</label></div>
+            <div class="answer"><label><input type="radio" name="q11" value="C"> Проверяваш в интернет дали това не са симптоми на нещо сериозно.</label></div>
+            <div class="answer"><label><input type="radio" name="q11" value="D"> Опитваш се да намериш ново хоби, което да те разсее от тъгата.</label></div>
+        </div>
+
+        <div class="question-group">
+            <div class="question">4. Записваш се на фитнес, за да се грижиш за себе си. Какво правиш, когато срещнеш първите трудности?</div>
+            <div class="answer"><label><input type="radio" name="q12" value="A"> Отказваш се, защото не е това, което си очаквал, и ти е прекалено трудно.</label></div>
+            <div class="answer"><label><input type="radio" name="q12" value="B"> Намираш си приятел, с когото да тренирате заедно.</label></div>
+            <div class="answer"><label><input type="radio" name="q12" value="C"> Питаш треньора как да се справиш с трудностите, за да постигнеш целите си.</label></div>
+            <div class="answer"><label><input type="radio" name="q12" value="D"> Променяш си тренировъчната програма, като пробваш различни упражнения, докато не намериш това, което ти допада.</label></div>
+        </div>
+
+        <div class="question-group">
+            <h2>4. Емоционална Зрялост и Решаване на Проблеми</h2>
+            <div class="question">1. Родителите ти казват, че не са съгласни с решението ти за gap year и смятат, че е грешно. Как реагираш?</div>
+            <div class="answer"><label><input type="radio" name="q13" value="A"> Защитаваш решението си, като се опитваш да ги убедиш в правотата си.</label></div>
+            <div class="answer"><label><input type="radio" name="q13" value="B"> Приемаш мнението им, но не им обръщаш внимание, защото решението си е твое.</label></div>
+            <div class="answer"><label><input type="radio" name="q13" value="C"> Обсъждате темата и ти споделяш защо си взел това решение, но в същото време изслушваш техните притеснения.</label></div>
+            <div class="answer"><label><input type="radio" name="q13" value="D"> Ядосваш се и прекратяваш разговора.</label></div>
+        </div>
+
+        <div class="question-group">
+            <div class="question">2. Имаш конфликт с колега на работа, докато работите по общ проект. Как решаваш проблема?</div>
+            <div class="answer"><label><input type="radio" name="q14" value="A"> Спираш да работиш по проекта и просто чакаш той да го завърши.</label></div>
+            <div class="answer"><label><input type="radio" name="q14" value="B"> Опитваш се да говориш с него, за да намерите компромис, като същевременно търсиш и други алтернативни начини да завършите проекта.</label></div>
+            <div class="answer"><label><input type="radio" name="q14" value="C"> Опитваш се да се наложиш, защото вярваш, че твоят начин на работа е по-добър.</label></div>
+            <div class="answer"><label><input type="radio" name="q14" value="D"> Оставяш проблема да се разреши сам с времето, като се надяваш той да се откаже.</label></div>
+        </div>
+
+        <div class="question-group">
+            <div class="question">3. Имате разговор с родителите си за това, че искаш да заминеш в чужбина за няколко месеца. Как го правиш?</div>
+            <div class="answer"><label><input type="radio" name="q15" value="A"> Изпращаш им съобщение и просто им съобщаваш решението си.</label></div>
+            <div class="answer"><label><input type="radio" name="q15" value="B"> Избираш подходящ момент, за да обсъдите темата, като предварително си се подготвил за техните въпроси.</label></div>
+            <div class="answer"><label><input type="radio" name="q15" value="C"> Изчакваш да дойде времето, в което трябва да тръгваш, и тогава им съобщаваш.</label></div>
+            <div class="answer"><label><input type="radio" name="q15" value="D"> Започваш разговора, но се разстройваш, ако родителите ти не са съгласни с теб.</label></div>
+        </div>
+
+        <div class="question-group">
+            <div class="question">4. Насрочил си си важна среща, но изведнъж получаваш съобщение, че ще закъснееш. Какво правиш?</div>
+            <div class="answer"><label><input type="radio" name="q16" value="A"> Изпращаш съобщение, с което уведомяваш, че ще закъснееш.</label></div>
+            <div class="answer"><label><input type="radio" name="q16" value="B"> Свързваш се с човека, за да го уведомиш, като същевременно му даваш алтернативен вариант за нова среща.</label></div>
+            <div class="answer"><label><input type="radio" name="q16" value="C"> Започваш да се извиняваш, за да избегнеш евентуални проблеми.</label></div>
+            <div class="answer"><label><input type="radio" name="q16" value="D"> Не се свързваш с човека, защото не искаш да се излагаш.</label></div>
+        </div>
+        
+        <button type="submit" class="submit-btn">Оцени моята готовност</button>
+    </form>
+
+    <div id="result" class="result-box">
+        <h3>Анализ на твоите отговори</h3>
+        <div id="result-text"></div>
+        <div id="recommendation-text" class="recommendation"></div>
+    </div>
+</div>
+
+<script>
+document.getElementById('quizForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const answers = {
+        'q1': document.querySelector('input[name="q1"]:checked')?.value,
+        'q2': document.querySelector('input[name="q2"]:checked')?.value,
+        'q3': document.querySelector('input[name="q3"]:checked')?.value,
+        'q4': document.querySelector('input[name="q4"]:checked')?.value,
+        'q5': document.querySelector('input[name="q5"]:checked')?.value,
+        'q6': document.querySelector('input[name="q6"]:checked')?.value,
+        'q7': document.querySelector('input[name="q7"]:checked')?.value,
+        'q8': document.querySelector('input[name="q8"]:checked')?.value,
+        'q9': document.querySelector('input[name="q9"]:checked')?.value,
+        'q10': document.querySelector('input[name="q10"]:checked')?.value,
+        'q11': document.querySelector('input[name="q11"]:checked')?.value,
+        'q12': document.querySelector('input[name="q12"]:checked')?.value,
+        'q13': document.querySelector('input[name="q13"]:checked')?.value,
+        'q14': document.querySelector('input[name="q14"]:checked')?.value,
+        'q15': document.querySelector('input[name="q15"]:checked')?.value,
+        'q16': document.querySelector('input[name="q16"]:checked')?.value
+    };
+
+    const totalQuestions = Object.keys(answers).length;
+    let answeredQuestions = 0;
+    for (const key in answers) {
+        if (answers[key]) {
+            answeredQuestions++;
+        }
+    }
+
+    if (answeredQuestions < totalQuestions) {
+        alert("Моля, отговори на всички въпроси, за да получиш резултат.");
+        return;
+    }
+
+    let score = 0;
+    const scores = {
+        // Финансова Отговорност
+        q1: { A: 0, B: 3, C: 4, D: 2 },
+        q2: { A: 0, B: 2, C: 4, D: 3 },
+        q3: { A: 0, B: 4, C: 2, D: 3 },
+        q4: { A: 0, B: 1, C: 4, D: 2 },
+        // Управление на Домакинството
+        q5: { A: 1, B: 2, C: 4, D: 0 },
+        q6: { A: 2, B: 1, C: 4, D: 3 },
+        q7: { A: 1, B: 2, C: 4, D: 0 },
+        q8: { A: 1, B: 4, C: 2, D: 0 },
+        // Здраве и Лични Грижи
+        q9: { A: 0, B: 1, C: 4, D: 3 },
+        q10: { A: 2, B: 1, C: 4, D: 3 },
+        q11: { A: 1, B: 4, C: 3, D: 2 },
+        q12: { A: 0, B: 2, C: 4, D: 3 },
+        // Емоционална Зрялост и Решаване на Проблеми
+        q13: { A: 2, B: 1, C: 4, D: 0 },
+        q14: { A: 0, B: 4, C: 2, D: 1 },
+        q15: { A: 0, B: 4, C: 1, D: 2 },
+        q16: { A: 2, B: 4, C: 3, D: 1 }
+    };
+
+    for (const q in answers) {
+        if (answers[q] && scores[q]) {
+            score += scores[q][answers[q]];
+        }
+    }
+
+    const maxScore = totalQuestions * 4;
+    const percentage = (score / maxScore) * 100;
+    let recommendation = "";
+    let analysis = "";
+
+    if (percentage > 80) {
+        recommendation = "Да, годината почивка е чудесна идея! Изглежда, че си подготвен.";
+        analysis = `
+            <p><strong>Готовност за самостоятелност: Висока</strong></p>
+            <p>Отговорите ти показват, че си много подготвен за самостоятелен живот. Имаш силна финансова интелигентност, умения за справяне с домакински проблеми и емоционална зрялост. Можеш да поемаш отговорност и да решаваш проблеми, без да разчиташ прекалено на другите. Годината почивка ще ти даде възможност да изградиш още повече увереност и опит.</p>
+        `;
+    } else if (percentage > 60) {
+        recommendation = "Да, годината почивка е добра идея, но с ясен план.";
+        analysis = `
+            <p><strong>Готовност за самостоятелност: Средна към висока</strong></p>
+            <p>Резултатите показват, че имаш солидна основа за самостоятелен живот. Вече разполагаш с важни умения, но все още има области, в които можеш да се усъвършенстваш. Годината почивка е отлична възможност да се фокусираш върху тези умения и да натрупаш опит. Работи върху финансовото планиране и намирането на решения на проблеми, преди да се обърнеш за помощ.</p>
+        `;
+    } else if (percentage > 40) {
+        recommendation = "Може би годината почивка е добра идея, но само ако имаш подкрепа.";
+        analysis = `
+            <p><strong>Готовност за самостоятелност: Средна</strong></p>
+            <p>Отговорите ти показват, че си в процес на учене. Имаш желание да бъдеш самостоятелен, но все още разчиташ на другите за решаване на проблеми. Годината почивка ще ти даде възможност да станеш по-независим, но е важно да имаш подкрепата на семейството си. Използвай тази година, за да се научиш как да управляваш финанси, да се грижиш за домакинството и да поемаш отговорност.</p>
+        `;
+    } else {
+        recommendation = "В момента годината почивка може да е предизвикателство. Помисли как да се подготвиш по-добре.";
+        analysis = `
+            <p><strong>Готовност за самостоятелност: Ниска</strong></p>
+            <p>Резултатите показват, че все още имаш много да учиш, преди да си напълно готов за самостоятелен живот. Това не е нещо лошо, просто означава, че е важно да се фокусираш върху развитието си. Вместо да поемаш по пътя на самостоятелността, можеш да използваш годината, за да се научиш да управляваш своите финанси, да готвиш и да се грижиш за себе си. Всичко това ще ти помогне да си по-уверен и подготвен за бъдещето.</p>
+        `;
+    }
+
+    document.getElementById('result-text').innerHTML = analysis;
+    document.getElementById('recommendation-text').textContent = recommendation;
+    document.getElementById('result').style.display = 'block';
+});
+</script>
+
+</body>
+</html>
