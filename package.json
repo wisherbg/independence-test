@@ -1,14 +1,8 @@
 {
   "name": "gap-year-quiz",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "description": "A questionnaire for assessing independence for a gap year.",
+  "main": "api/analyze.js",
   "dependencies": {
     "@google/generative-ai": "^0.24.1",
     "dotenv": "^17.2.1",
